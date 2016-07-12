@@ -1,0 +1,94 @@
+/**
+ * Related items wrapper
+ */
+.live-update-related {
+    @include clearfix;
+
+    margin-top: rem(23);
+}
+
+/**
+ * Apply animation to context when update is not initial
+ */
+#{$live-update-updated-class} .live-update-related {
+    opacity: 0;
+    animation: fade-in .5s linear .5s forwards;
+}
+
+/**
+ * Related item
+ */
+.live-update-related-item {
+    @extend %aspect-ratio;
+    @extend %image-gradient-overlay-position-relative;
+
+    float: left;
+    width: calc(50% - #{rem(1.5)});
+    margin-bottom: rem(3);
+    position: relative;
+
+    /**
+     * Add margin to every odd item
+     */
+    &:nth-child(2n+1) {
+        margin-right: rem(3);
+    }
+
+    /**
+     * Remove margin of the last and second to last related item
+     */
+    &:last-child,
+    &:nth-last-child(2) {
+        margin-bottom: 0;
+    }
+}
+
+/**
+ * Blow up image to scale to aspect ratio
+ */
+.live-update-related-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+/**
+ * Title inside related item
+ */
+.live-update-related-item-title {
+    position: absolute;
+    margin: calc-margin(.5);
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+
+    font-size: em(14);
+    font-weight: 600;
+}
+
+.live-update-related-item-link {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    display: block;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+/**
+ * Breakpoint of tablet+
+ * @breakpoint tablet
+ */
+@include mappy-bp(small) {
+    .live-update-related {
+        width: 50%;
+        margin-left: 50%;
+    }
+
+    #{$live-update-updated-class} .live-update-related {
+        animation-name: fade-in-left;
+    }
+}

@@ -1,0 +1,129 @@
+.event {
+    border-radius: $rounded-corners;
+    box-shadow: 0 1px 1px 0px $subtle-shadow;
+    margin: 0 0 14px;
+}
+
+.event_soldout,
+.event_cancelled {
+    opacity: .5;
+}
+
+.event svg {
+    margin-right: $halfwhitespace;
+    width: 11px;
+    height: 11px;
+}
+
+.event__insignia {
+    display: block;
+    border-radius: 3px;
+    height: 70px;
+    width: 70px;
+    padding: 13px 1px 6px;
+    float: left;
+    margin-right: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    @include breakpoint(extra-small) {
+        display: none;
+    }
+}
+
+.event__insignia h5 {
+    margin: 0;
+}
+
+.event__insignia span {
+    width: 30px;
+    height: 34px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -17px;
+    margin-left: -15px;
+}
+
+.event__insignia_multidate span {
+    width: 49%;
+    float: left;
+    position: static;
+    transform: none;
+    margin: 0;
+    height: 46px;
+}
+
+.event__insignia_multidate h5 {
+    margin: 10px 0 0;
+}
+
+.event__insignia_multidate span:first-child {
+    width: 51%;
+    border-right-width: 1px;
+    border-right-style: solid;
+}
+
+.event__block {
+    display: block;
+    padding: $whitespace;
+    text-decoration: none;
+    position: relative;
+    height: auto;
+    overflow: hidden;
+}
+
+.event__info {
+    box-sizing: content-box;
+    overflow: hidden;
+}
+
+.event__location {
+    margin-top: $halfwhitespace;
+    @include breakpoint(extra-small) {
+        margin-top: 3px;
+    }
+}
+
+.event .badge {
+    position: absolute;
+    bottom: $whitespace;
+    right: $whitespace;
+}
+
+.event:first-child .event__block {
+    border-top: none;
+}
+
+.event__name {
+    font-size: 1.17em;
+    margin-bottom: 2px;
+    line-height: 1em;
+    font-weight: bold;
+}
+
+.event__name_short,
+.event__sutitle {
+    text-overflow: ellipsis;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.event__date {
+    display: none;
+    @include breakpoint(extra-small) {
+        display: inline-block;
+        margin-top: $halfwhitespace;
+    }
+}
+
+.event__location_short {
+    @include breakpoint(large) {
+        width: 75%;
+    }
+}
+
+.event__info p {
+    margin-bottom: 0;
+}

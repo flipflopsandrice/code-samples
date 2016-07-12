@@ -1,0 +1,68 @@
+.issuers_toggle,
+.cards_toggle {
+    display: none;
+}
+
+.no-js .banks,
+.no-js .cards_toggle {
+    opacity: 1;
+    display: block;
+}
+
+.payments__processing svg {
+    -webkit-animation: paymentProcessing 2s infinite;
+    animation: paymentProcessing 2s infinite;
+}
+
+@-webkit-keyframes paymentProcessing {
+    2% { transform: translate(0%, 0%) rotate(0deg); opacity: 1; }
+    6% { transform: translate(100%, 0%); opacity: 0; }
+    10% { opacity: 0; }
+    14% { transform: translate(-100%,0); opacity: 0;}
+    16% { transform: translate(0,0); opacity: 1;}
+    100% {  }
+}
+
+@keyframes paymentProcessing {
+    10% { transform: translate(0%, 0%) rotate(0deg); opacity: 1; }
+    20% { transform: translate(50%, 0%); opacity: 0; }
+    24% { opacity: 0; }
+    30% { transform: translate(-50%,0); opacity: 0;}
+    40% { transform: translate(0,0); opacity: 1;}
+    100% {  }
+}
+
+.banks-block {
+    position: relative;
+}
+
+.cards__form button:disabled,
+.cards__form button:disabled:hover,
+.cards__form button.no-pointer-events {
+    opacity: 0.5;
+}
+
+.button-paymethod .inset {
+    padding: 0;
+}
+
+.button-paymethod svg {
+    margin: 7px;
+    width: 31px;
+    height: 24px;
+}
+
+.button-paymethod svg[title="iDEAL"],
+.button-paymethod svg[title="PAY PAL"],
+.button-paymethod svg[title="MasterCard / VISA"],
+.button-paymethod svg[title="American Express"] {
+    height: 20px;
+    margin: 10px 7px;
+}
+
+.button-paymethod svg[title="DIRECTebanking"],
+.button-paymethod svg[title="SOFORT Banking"] {
+    margin: 2px 4px;
+    width: 38px;
+    height: 36px;
+}

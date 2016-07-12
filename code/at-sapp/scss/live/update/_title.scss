@@ -1,0 +1,17 @@
+/**
+ * Live update item title
+ */
+.live-update-title {
+    margin: em(15) rem(20);
+    font: {
+        size: em(21);
+        weight: 600;
+    }
+}
+
+/**
+ * Remove title top margin if it is positioned below a meta block (if update has a link)
+ */
+.live-update-meta + .live-update-title {
+    margin-top: 0;
+}

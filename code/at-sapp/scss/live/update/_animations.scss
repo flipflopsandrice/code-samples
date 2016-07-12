@@ -1,0 +1,84 @@
+/**
+ * Animation that is triggered when a new update is added
+ *
+ * [1] @todo if the update is taller than this value, we have a problem, houston.
+ */
+@keyframes update-appear {
+    0% {
+        max-height: 0;
+    }
+
+    100% {
+        max-height: 1000px; // [1]
+    }
+}
+
+@keyframes update-fade-in-appear {
+    0% {
+        opacity: 0;
+        max-height: 0;
+    }
+
+    30% {
+        opacity: .5;
+        max-height: 500px;
+    }
+
+    60% {
+        opacity: 1;
+        max-height: 1000px; // [1]
+    }
+
+    100% {
+        opacity: 1;
+        max-height: 1000px; // [1]
+    }
+}
+
+/**
+ * Animation that is triggered for items inside the update (left side)
+ */
+@keyframes fade-in-left {
+    0% {
+        opacity: 0;
+        transform: translateX(5%);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/**
+ * Animation that is triggered for items inside the update (right side)
+ */
+@keyframes fade-in-right {
+    0% {
+        opacity: 0;
+        transform: translateX(-5%);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/**
+ * Animation that is triggered for items inside the update (from bottom)
+ */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-15%);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-7.5%);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

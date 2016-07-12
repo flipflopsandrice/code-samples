@@ -1,0 +1,19 @@
+/**
+ * Update content
+ */
+.live-update-content {
+    margin: 0 rem(20) rem(25);
+    font-size: em(13);
+}
+
+
+
+/**
+ * Breapkoint tablet+
+ *
+ */
+@include mappy-bp(small) {
+    .live-update-content {
+        @include text-overflow(3, 56px);
+    }
+}

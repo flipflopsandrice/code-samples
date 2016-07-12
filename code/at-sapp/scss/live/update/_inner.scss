@@ -1,0 +1,38 @@
+/**
+ * Apply animation to context when update is not initial
+ */
+#{$live-update-updated-class} .live-update-inner {
+    opacity: 0;
+    animation: fade-in .5s linear .25s forwards;
+}
+
+/**
+ * Breakpoint everything above small
+ * @breakpoint small
+ */
+@include mappy-bp(small) {
+    /**
+     * Wraps the content and related updates
+     */
+    .live-update-inner {
+        width: 49%;
+        float: right;
+    }
+
+    #{$live-update-updated-class} .live-update-inner {
+        animation-name: fade-in-left;
+    }
+}
+
+/**
+ * Breakpoint everything above medium above
+ * @breakpoint medium
+ */
+@include mappy-bp(medium) {
+    /**
+     * Add an additional padding to the inner content
+     */
+    .live-update-inner {
+        padding: rem(21) 0;
+    }
+}

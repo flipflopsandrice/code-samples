@@ -1,0 +1,44 @@
+/**
+ * Main update image
+ */
+.live-update-crop {
+    @extend %aspect-ratio;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
+/**
+ * Apply animation to context when update is not initial
+ */
+#{$live-update-updated-class} .live-update-crop {
+    opacity: 0;
+    animation: fade-in .5s linear 0s forwards;
+}
+
+/**
+ * Breakpoint tablet
+ * @breakpoint tablet
+ */
+@include mappy-bp(small) {
+    /**
+     * Resize the main update image on tablet+
+     *
+     * [1] inline-block causes whitespace overflow of approx 5px
+     */
+    .live-update-crop {
+        width: 50%;
+        display: inline-block;
+        margin-bottom: -5px; // [1]
+    }
+
+    #{$live-update-updated-class} .live-update-crop {
+        animation-name: fade-in-right;
+        animation-delay: 0s;
+    }
+}

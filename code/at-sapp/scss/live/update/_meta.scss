@@ -1,0 +1,33 @@
+/**
+ * Update meta data wrapper
+ */
+.live-update-meta {
+    padding: em(15) em(20);
+}
+
+/**
+ * Individual meta data item
+ */
+.live-update-meta-item {
+    display: inline-block;
+    margin-right: em(16);
+    position: relative;
+    width: em(16);
+    height: em(16);
+
+    .icon-svg {
+        transition: fill ($animation-time * 2) $animation-motion;
+        fill: color(white, 500, .5);
+    }
+
+    &:hover .icon-svg {
+        fill: color(yellow, 500);
+    }
+}
+
+/**
+ * Scale up google+ icon
+ */
+.live-update-meta-item.meta-google {
+    transform: scale(1.3);
+}

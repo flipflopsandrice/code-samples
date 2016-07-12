@@ -1,0 +1,36 @@
+/**
+ * Page class
+ */
+.live {
+    background: color(black, 900);
+}
+
+/**
+ * Main box wrapper of content area, in the live context
+ */
+.live .box {
+    padding-top: rem(137);
+    z-index: 1;
+    color: color(white, 500);
+}
+
+/**
+ * Mobile device breakpoint
+ * @breakpoint mobile
+ */
+@include mappy-query(mobile) {
+    .live .box {
+        background: transparent;
+        padding-top: rem(117);
+    }
+}
+
+/**
+ * Anything above mobile device breakpoint
+ * @breakpoint tablet+
+ */
+@include mappy-bp(small) {
+    .live .box {
+        padding: rem(193) rem(104) rem(64);
+    }
+}

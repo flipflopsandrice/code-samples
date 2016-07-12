@@ -1,0 +1,52 @@
+/**
+ * The item number and time posted of the live update item
+ */
+.live-update-timer {
+    transition: color ($animation-time * 2) $animation-motion;
+    margin: 0 auto em(54);
+    width: em(140);
+    padding: em(10) em(15);
+    position: relative;
+
+    border: 2px solid color(grey, 500);
+    color: color(grey, 500);
+
+    font-size: em(11);
+    text-transform: uppercase;
+    text-align: center;
+
+    /**
+     * Add a line from the update time to the main update image
+     */
+    &::after {
+        background: color(grey, 500);
+        content: '';
+        height: 200%;
+        width: 2px;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        bottom: 0;
+    }
+}
+
+/**
+ * Give timer a slightly brighter tint on hover
+ */
+.live-update:hover .live-update-timer {
+    color: color(white, 500, .7);
+}
+
+/**
+ * Breakpoint tablet and larger
+ * @breakpoint tablet
+ */
+@include mappy-bp(small) {
+    /**
+     * Stretch the timer line all the way to the next live update item
+     */
+    .live-update-timer::after {
+        height: 150vh;
+        z-index: 2;
+    }
+}
