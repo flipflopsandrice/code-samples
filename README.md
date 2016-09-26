@@ -21,6 +21,16 @@ Common techniques:
 
 * Cordova
 
+*at-dpzg*
+
+* BDD & Unit tests
+
+*at-zn*
+
+* BDD & Unit tests
+* AngularJS
+* ElasticSearch
+
 ## ts-api
 
 * Heroku
