@@ -22,6 +22,8 @@ for hyper-responsiveness. All rendering was done server-side, except UI and stat
 Project was built up using Gulp, NPM and Bower for dependencies, Browserify and Handlebars (+ lightncandy),
 and used Selenium and Nightwatch for unit/e2e tests.
 
+[view code samples](api/)
+
 ## sales-channel
 
 A hypermedia-inspired microservice containing all ticket and shop information,
@@ -31,3 +33,5 @@ opened up to third parties.
 Built using the Silex microframework, PHPUnit, a Swagger
 specification and mocking server, Docker for development and deployment, PostgreSQL
 with mixed relational and BSON data structure, and Heroku + TravisCI for additional testing.
+
+[view code samples](sc/)
